@@ -1,0 +1,42 @@
+//
+//  DAPopupAd.h
+//  IgaworksAd
+//
+//  Created by wonje,song on 2014. 4. 22..
+//  Copyright (c) 2014년 wonje,song. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "DAError.h"
+
+
+@protocol DAPopupAdDelegate;
+
+@interface DAPopupAd : NSObject
+
+
+@property (nonatomic, unsafe_unretained) id<DAPopupAdDelegate> delegate;
+
+
+- (instancetype)initWithKey:(NSString *)appKey spotKey:(NSString *)spotKey NS_DESIGNATED_INITIALIZER;
+- (BOOL)presentFromViewController:(UIViewController *)viewController;
+
+@end
+
+@protocol DAPopupAdDelegate <NSObject>
+
+@optional
+- (void)DAPopupAdDidLoad:(DAPopupAd *)popupAd;
+
+- (void)DAPopupAd:(DAPopupAd *)popupAd didFailToReceiveAdWithError:(DAError *)error;
+
+- (void)DAPopupAdWillLeaveApplication:(DAPopupAd *)popupAd;
+
+- (void)willOpenDAPopupAd;
+- (void)didOpenDAPopupAd;
+- (void)willCloseDAPopupAd;
+- (void)didCloseDAPopupAd;
+
+@end
