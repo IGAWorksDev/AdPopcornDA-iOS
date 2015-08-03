@@ -23,12 +23,31 @@
 
 @property (nonatomic, strong) id nativeAdvertisingResultJson;
 
+
+/*!
+ @abstract
+ native ad instance 생성.
+ @param appKey          app key
+ @param spotKey         spot key
+ */
 - (instancetype)initWithKey:(NSString *)appKey spotKey:(NSString *)spotKey NS_DESIGNATED_INITIALIZER;
 
+/*!
+ @abstract
+ native 광고 요청한다.
+ */
 - (void)loadAd;
 
-
+/*!
+ @abstract
+ 광고 노출시, 호출한다.
+ */
 - (void)callImpression:(NSString *)impressionUrl;
+
+/*!
+ @abstract
+ 광고 클릭시, 호출한다.
+ */
 - (void)click:(NSString *)clickUrl;
 
 @end
@@ -37,8 +56,17 @@
 @protocol DANativeAdDelegate <NSObject>
 
 @optional
+
+/*!
+ @abstract
+ native 광고 load 완료시(성공시), 호출된다.
+ */
 - (void)DANativeAdDidFinishLoading:(DANativeAd *)nativeAd;
 
+/*!
+ @abstract
+ native 광고 load 실패시, 호출된다.
+ */
 - (void)DANativeAd:(DANativeAd *)nativeAd didFailWithError:(DAError *)error;
 
 
