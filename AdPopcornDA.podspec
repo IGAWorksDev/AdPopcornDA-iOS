@@ -20,6 +20,7 @@ s.author       = { "wonje,song" => "ricky@igaworks.com" }
 s.source       = { :git => "https://github.com/IGAWorksDev/AdPopcornDA-iOS.git", :tag => "#{s.version}" }
 s.resources = "AdPopcornDA.bundle"
 s.ios.vendored_frameworks = 'AdPopcornDA.framework'
+s.frameworks = 'AdSupport'
 s.libraries = 'xml2'
 s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"' }
 end
