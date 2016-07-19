@@ -26,6 +26,7 @@
  @param spotKey         spot key
  @param viewController  popup ad를 노출시킬 view controller
  */
+
 - (instancetype)initWithKey:(NSString *)appKey spotKey:(NSString *)spotKey NS_DESIGNATED_INITIALIZER;
 
 /*!
