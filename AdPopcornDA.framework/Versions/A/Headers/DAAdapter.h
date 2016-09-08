@@ -26,7 +26,8 @@ typedef enum _DAMediationGender
 typedef enum _DAAdType
 {
     DAAdBannerType,
-    DAAdInterstitialType
+    DAAdInterstitialType,
+    DANativeAdType
 } DAAdType;
 
 
@@ -50,18 +51,12 @@ typedef enum _DAAdType
 
 @property (nonatomic, unsafe_unretained, readonly) BOOL isSupportInterstitialAd;
 
-
-
-
 - (void)setViewController:(UIViewController *)viewController origin:(CGPoint)origin size:(CGSize)size bannerView:(DABannerView *)bannerView;
 - (void)setViewController:(UIViewController *)viewController;
-
+- (void)setNativeAdType;
 - (void)loadAd;
 - (void)closeAd;
-
 - (void)loadRequest;
-
-
 
 @property (NS_NONATOMIC_IOSONLY, readonly) CGSize adSize;
 
@@ -80,13 +75,13 @@ typedef enum _DAAdType
 
 - (void)DAAdapterBannerViewWillLeaveApplication:(UIView *)bannerView;
 
-//- (void)DAAdapterWillPresentBannerView:(UIView *)bannerView;
-
-
 - (void)DAAdapterInterstitialAdDidLoadAd:(NSObject *)interstitialAd;
 
 - (void)DAAdapterInterstitial:(NSObject *)interstitialAd didFailToReceiveAdWithError:(NSError *)error adapter:(DAAdapter *)adapter;
 
 - (void)DAAdapterInterstitialWillLeaveApplication:(NSObject *)interstitialAd;
+
+- (void)DAAdapterNativeAdDidLoadAd:(NSObject *)nativeAd networkName:(NSString *)networkName;
+- (void)DAAdapterNativeAd:(NSObject *)nativeAd didFailToReceiveAdWithError:(NSError *)error adapter:(DAAdapter *)adapter;
 
 @end

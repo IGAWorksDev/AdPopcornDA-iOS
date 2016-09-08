@@ -12,6 +12,7 @@
 #import "DAError.h"
 
 #import "DAGetNativeAdvertisingResult.h"
+#import "DAAdapter.h"
 
 @protocol DANativeAdDelegate;
 
@@ -23,6 +24,9 @@
 
 @property (nonatomic, strong) id nativeAdvertisingResultJson;
 
+@property (nonatomic, strong) NSString *adNetworkName;
+
+@property (nonatomic, strong) NSObject *mediationNativeAdResult;
 
 /*!
  @abstract

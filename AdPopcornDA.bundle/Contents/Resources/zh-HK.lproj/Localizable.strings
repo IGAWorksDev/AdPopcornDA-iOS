@@ -1,0 +1,18 @@
+/*
+ Localizable.strings
+ AdPOPcornSDKRevision
+ 
+ Created by wonje,song on 13. 2. 5..
+ Copyright (c) 2013년 wonje,song. All rights reserved.
+ */
+
+/* Chinese zh-hant */
+
+/* Title used for alert view title */
+"alertViewTitle" = "廣告爆米花";
+
+/* Title used for alert view confirm button */
+"confirm" = "確認";
+
+"pleaseCheckInTheMailSettings" = "請確認郵件設置。";
+"contactUsMailMessage" = "adPOPcorn期待所有實力公司的合作。\n<合作諮詢>\n*公司名: \n*負責人: \n*聯繫方式: \n*郵箱: \n*內容 : ";

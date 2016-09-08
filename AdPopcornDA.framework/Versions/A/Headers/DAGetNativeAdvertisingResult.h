@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "DAGetNativeAdvertisingCampaign.h"
+#import "DAGetNativeAdvertisingCampaignMediation.h"
 
 @interface DAGetNativeAdvertisingResult : NSObject
 
@@ -18,10 +19,13 @@
 @property (nonatomic, copy) NSString *resultMsg;
 
 @property (nonatomic, strong) NSMutableArray *campaignListArray;
+@property (nonatomic, strong) DAGetNativeAdvertisingCampaignMediation *mediation;
+
 
 - (void)addCampaignArray:(NSArray *)objects;
 - (void)removeCampaignArray;
 - (void)addCampaignObject:(DAGetNativeAdvertisingCampaign *)object;
 - (void)removeCampaignObject:(DAGetNativeAdvertisingCampaign *)object;
+
 
 @end
