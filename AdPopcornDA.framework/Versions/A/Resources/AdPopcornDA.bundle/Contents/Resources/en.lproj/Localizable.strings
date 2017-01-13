@@ -14,3 +14,10 @@
 "pleaseCheckInTheMailSettings" = "Please check in the mail settings.";
 
 "contactUsMailMessage" = "adPOPcorn is awating you to be with you!\n<Partnership Inquiry>\n*Company Name : \n*Contacting Person : \n*Contact No. : \n*Email : \n*Content : ";
+
+"wrongURLAddress" = "Invalid URL address. Please contact Customer Service.";
+"yes" = "yes";
+"no" = "no";
+"freeDownload" = "Free Download";
+"learnMore" = "Learn More";
+"videoWatchAgainMessage" = "You have not finished watching your video. Would you like to start again?";

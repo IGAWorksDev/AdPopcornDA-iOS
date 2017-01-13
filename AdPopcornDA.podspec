@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "AdPopcornDA"
-s.version      = "2.0.9"
+s.version      = "2.1.0"
 s.summary      = "AdPopcornDA.framework"
 s.homepage     = "https://github.com/IGAWorksDev/AdPopcornDA-iOS"
 
@@ -20,7 +20,7 @@ s.author       = { "wonje,song" => "ricky@igaworks.com" }
 s.source       = { :git => "https://github.com/IGAWorksDev/AdPopcornDA-iOS.git", :tag => "#{s.version}" }
 s.resources = "AdPopcornDA.bundle"
 s.ios.vendored_frameworks = 'AdPopcornDA.framework'
-s.frameworks = 'AdSupport', 'MobileCoreServices', 'MessageUI'
+s.frameworks = 'AdSupport', 'MobileCoreServices', 'MessageUI', 'MediaPlayer', 'AVKit', 'AVFoundation', 'CoreMedia'
 s.libraries = 'xml2'
 s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"' }
 end
